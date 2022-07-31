@@ -9,6 +9,7 @@ public class MovieTests {
 	public void movieShouldHaveCorrectStructure() {
 	
 		Movie entity = new Movie();
+		
 		entity.setId(1L);
 		entity.setTitle("Title");
 		entity.setSubTitle("Subtitle");
