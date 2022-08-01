@@ -112,7 +112,7 @@ public class User implements Serializable, UserDetails {
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
 	}
-
+	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return roles.stream().map(role -> new SimpleGrantedAuthority(role.getAuthority()))
@@ -142,5 +142,15 @@ public class User implements Serializable, UserDetails {
 	@Override
 	public boolean isEnabled() {
 		return true;
+	}
+	
+	public boolean hasRole(String roleName) {
+		for (Role role : roles ) {
+			if(role.getAuthority().equals(roleName)) {
+				return true;
+			}
+		}
+		
+		return false;
 	}
 }
