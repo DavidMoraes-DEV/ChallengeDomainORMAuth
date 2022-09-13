@@ -10,3 +10,9 @@
 .nav-logo-text h4 {
     font-size: 24px;
 }
+
+@media (min-width:768px) {
+    .main-nav {
+        padding: 17px 30px;
+    }
+}

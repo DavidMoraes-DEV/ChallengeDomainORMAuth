@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 const CardLogin = () => {
@@ -21,9 +22,9 @@ const CardLogin = () => {
             name="password"
           />
         </div>
-        <div className="login-submit">
-            <button>FAZER LOGIN</button>
-        </div>
+        <Link to="/movies">
+          <button>FAZER LOGIN</button>
+        </Link>
       </form>
     </div>
   );

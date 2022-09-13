@@ -27,6 +27,7 @@ a, a:hover {
   font-size: 16px;
   letter-spacing: -0.015em;
   color: #263238;
+  border: none;
   height: 40px;
   margin-bottom: 20px;
   width: 100%;
@@ -35,4 +36,10 @@ a, a:hover {
 .base-input::placeholder {
   color: #9E9E9E;
   padding-left: 10px;
+}
+
+@media (min-width: 1200px) {
+  .base-input {
+    height: 50px;
+  }
 }
